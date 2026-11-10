@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Zero Radii Standard — enforced globally as a backstop to `rounded-none`. */
+*,
+*::before,
+*::after {
+  border-radius: 0px !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  background: #f9fafb;
+  color: #111111;
+}
+
+@layer components {
+  .caution-stripe {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      #111111 0,
+      #111111 16px,
+      #ea580c 16px,
+      #ea580c 32px
+    );
+  }
+  .field {
+    @apply w-full rounded-none border-2 border-black bg-white px-3 py-2 font-mono text-sm text-charcoal outline-none focus:bg-amber-100;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-none border-2 border-black px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider transition-colors;
+  }
+}
