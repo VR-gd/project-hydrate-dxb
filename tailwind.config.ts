@@ -17,10 +17,12 @@ const config: Config = {
     },
     extend: {
       colors: {
-        base: "#F9FAFB",
-        charcoal: "#111111",
-        amber: { thermal: "#EA580C" },
-        safety: "#DC2626",
+        ink: "#4A3F34",
+        sand: "#EAE4D6",
+        base: "#F5F2EA",
+        charcoal: "#3B3229",
+        amber: { thermal: "#6E8B5E" },
+        safety: "#8A6A4A",
       },
       fontFamily: {
         sans: ["Helvetica Neue", "Arial", "system-ui", "sans-serif"],

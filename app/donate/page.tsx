@@ -39,36 +39,36 @@ const TIERS = [
 export default function DonatePage() {
   return (
     <>
-      <div className="caution-stripe rounded-none border-b-2 border-black p-1">
-        <p className="rounded-none bg-charcoal px-4 py-3 text-center font-mono text-sm font-black uppercase tracking-widest text-amber-thermal">
+      <div className="caution-stripe rounded-none border-b-2 border-ink p-1">
+        <p className="rounded-none bg-charcoal px-4 py-3 text-center font-mono text-sm font-semibold uppercase tracking-widest text-amber-thermal">
           NOTICE: MOCK CHECKOUT // WORK IN PROGRESS TEMPLATE
         </p>
       </div>
 
       <section className="mx-auto max-w-7xl px-4 py-16">
-        <h1 className="text-3xl font-black uppercase md:text-5xl">Sponsor Water Stations</h1>
+        <h1 className="text-3xl font-semibold md:text-5xl">Sponsor Water Stations</h1>
         <p className="mt-4 max-w-2xl leading-relaxed">
           Choose a sponsorship tier to help supply cold water, electrolytes and cooling gear to
           Dubai&apos;s delivery riders and construction crews this summer.
         </p>
 
-        <div className="mt-10 grid rounded-none border-2 border-black md:grid-cols-3">
+        <div className="mt-10 grid rounded-none border-2 border-ink md:grid-cols-3">
           {TIERS.map((t) => (
             <article
               key={t.tag}
-              className={`rounded-none border-2 border-black p-6 -m-[1px] ${
+              className={`rounded-none border-2 border-ink p-6 -m-[1px] ${
                 t.featured ? "bg-charcoal text-white" : "bg-white"
               }`}
             >
               <p
-                className={`font-mono text-xs font-bold tracking-widest ${
+                className={`font-mono text-xs font-medium tracking-widest ${
                   t.featured ? "text-amber-thermal" : "text-safety"
                 }`}
               >
                 {t.tag}
               </p>
-              <p className="mt-3 text-5xl font-black">{t.price}</p>
-              <h2 className="mt-3 text-lg font-bold uppercase leading-snug">{t.title}</h2>
+              <p className="mt-3 text-4xl font-medium">{t.price}</p>
+              <h2 className="mt-3 text-lg font-medium leading-snug">{t.title}</h2>
               <ul className="mt-4 space-y-2 text-sm leading-relaxed">
                 {t.details.map((d) => (
                   <li key={d} className="flex gap-3">

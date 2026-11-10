@@ -16,25 +16,25 @@ export default function DonationForm() {
   return (
     <>
       <form
-        className="rounded-none border-2 border-black bg-white"
+        className="rounded-none border-2 border-ink bg-white"
         onSubmit={(e) => {
           e.preventDefault();
           setOpen(true);
         }}
       >
-        <div className="rounded-none border-b-2 border-black bg-charcoal px-6 py-4 font-mono text-sm font-bold uppercase tracking-widest text-white">
+        <div className="rounded-none border-b-2 border-ink bg-charcoal px-6 py-4 font-mono text-sm font-medium uppercase tracking-widest text-white">
           Checkout Simulation
         </div>
         <div className="grid gap-6 p-6 md:grid-cols-2">
-          <label className="block font-mono text-xs font-bold uppercase">
+          <label className="block font-mono text-xs font-medium uppercase">
             Full Name
             <input type="text" name="name" className="field mt-2" placeholder="Your name" />
           </label>
-          <label className="block font-mono text-xs font-bold uppercase">
+          <label className="block font-mono text-xs font-medium uppercase">
             Email Address
             <input type="email" name="email" className="field mt-2" placeholder="you@example.com" />
           </label>
-          <label className="block font-mono text-xs font-bold uppercase">
+          <label className="block font-mono text-xs font-medium uppercase">
             Sponsor Tier
             <select name="tier" className="field mt-2" defaultValue="t2">
               {TIERS.map((t) => (
@@ -44,14 +44,14 @@ export default function DonationForm() {
               ))}
             </select>
           </label>
-          <label className="block font-mono text-xs font-bold uppercase">
+          <label className="block font-mono text-xs font-medium uppercase">
             Custom AED Amount
             <input type="number" min={1} name="amount" className="field mt-2" placeholder="e.g. 150" />
           </label>
         </div>
 
-        <fieldset className="mx-6 mb-6 rounded-none border-2 border-black p-4">
-          <legend className="px-2 font-mono text-xs font-bold uppercase">Payment Method</legend>
+        <fieldset className="mx-6 mb-6 rounded-none border-2 border-ink p-4">
+          <legend className="px-2 font-mono text-xs font-medium uppercase">Payment Method</legend>
           <div className="flex flex-col gap-3 sm:flex-row sm:gap-8">
             {METHODS.map((m, i) => (
               <label key={m} className="flex items-center gap-2 font-mono text-sm">
@@ -62,7 +62,7 @@ export default function DonationForm() {
           </div>
         </fieldset>
 
-        <div className="rounded-none border-t-2 border-black p-6">
+        <div className="rounded-none border-t-2 border-ink p-6">
           <button type="submit" className="btn bg-amber-thermal text-white hover:bg-charcoal">
             Submit Donation (WIP Mode)
           </button>
@@ -74,12 +74,12 @@ export default function DonationForm() {
           role="dialog"
           aria-modal="true"
           aria-labelledby="mock-title"
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4"
         >
-          <div className="w-full max-w-md rounded-none border-2 border-black bg-white">
-            <div className="caution-stripe h-4 rounded-none border-b-2 border-black" />
+          <div className="w-full max-w-md rounded-none border-2 border-ink bg-white">
+            <div className="caution-stripe h-4 rounded-none border-b-2 border-ink" />
             <div className="p-6">
-              <h2 id="mock-title" className="text-xl font-black uppercase">
+              <h2 id="mock-title" className="text-xl font-semibold uppercase">
                 Simulation Only
               </h2>
               <p className="mt-3 text-sm leading-relaxed">
